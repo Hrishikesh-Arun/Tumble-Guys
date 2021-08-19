@@ -7,7 +7,8 @@ using UnityEngine.UI;
 
 public class GameHandler : MonoBehaviour
 {
-    public Text stars,playerN,playerN2;
+    public Text stars,playerN;
+	public InputField playerN2;
     public GameObject NameSelector,Panel;
     private static GameObject Panel4;
     public static int a;
@@ -17,6 +18,11 @@ public class GameHandler : MonoBehaviour
     void Awake()
     {
         SaveSystem.Init();
+		if (SaveSystem.Load() != null)
+        {
+			SaveObject saveObject = JsonUtility.FromJson<SaveObject>(SaveSystem.Load());
+			a = saveObject.level;
+        }
         if (SceneManager.GetActiveScene().name == "Level2" || SceneManager.GetActiveScene().name == "Level3" || SceneManager.GetActiveScene().name == "Level1")
         {
             PlayerMovement.IfWon = false;
@@ -58,6 +64,7 @@ public class GameHandler : MonoBehaviour
     public static void SaveData(int starAmount , string playerName , int level)
     {
         string loadString = SaveSystem.Load();
+		print(loadString);
         if (loadString != null)
         {
             SaveObject saveObject = JsonUtility.FromJson<SaveObject>(loadString);
