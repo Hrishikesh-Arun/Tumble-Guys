@@ -2,6 +2,11 @@
 # Tumble Guys
 My latest game.
 
+## Latest Alpha Update - 0.3.0a1 (Alpha)
++ "Beta On Steroids Update - Part 2 (Alpha)"
++ Change Skin feature added
++ Bug fixes
+
 ## Latest In Development Update - 0.3.0dev1 (Dev)
 + "Beta On Steroids Update - Part 2 (In Dev)"
 + New Skin Selection Menu
