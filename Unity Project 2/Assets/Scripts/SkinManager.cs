@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class SkinManager : MonoBehaviour
 {
-    //public Material Default, Chocolate, Cyan, Pinky;
-    public GameObject playerBody,menuSkin,title;
+    public Material Default;
+    public GameObject playerBody,menuSkin,title,playerPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (GameHandler.b == "")
+        {
+            if (playerPrefab != null)
+            {
+                playerPrefab.GetComponent<MeshRenderer>().material = Default;
+            }
+        }
+        if (playerBody != null)
+        {
+            playerBody.GetComponent<MeshRenderer>().material = playerPrefab.GetComponent<MeshRenderer>().sharedMaterial;
+        }
     }
 
     // Update is called once per frame
@@ -22,10 +32,17 @@ public class SkinManager : MonoBehaviour
     // Switches the Skin of the Player
     public void SwitchSkin(Material material)
     {
-        playerBody.GetComponent<MeshRenderer>().material = material;
+        if (playerBody != null)
+        {
+            playerBody.GetComponent<MeshRenderer>().material = material;
+        }
+        if (playerPrefab != null)
+        {
+            playerPrefab.GetComponent<MeshRenderer>().material = material;
+        }
     }
 
-    // Switches the Skin of the Player
+    // Toggle Skin Selection
     public void ToggleSkinSelection()
     {
         if (!menuSkin.activeInHierarchy)

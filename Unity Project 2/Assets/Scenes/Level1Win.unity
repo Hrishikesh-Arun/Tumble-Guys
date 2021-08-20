@@ -1811,6 +1811,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1318046527}
   - component: {fileID: 1318046528}
+  - component: {fileID: 1318046529}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: Untagged
@@ -1852,6 +1853,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f5d4a3c49df2348b2ae5865dca5574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stars: {fileID: 0}
+  playerN: {fileID: 0}
+  playerN2: {fileID: 0}
+  NameSelector: {fileID: 0}
+  Panel: {fileID: 0}
+--- !u!114 &1318046529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318046526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4cd2eb19ba8b747880eafec61565b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Default: {fileID: 0}
+  playerBody: {fileID: 499324592}
+  menuSkin: {fileID: 0}
+  title: {fileID: 0}
+  playerPrefab: {fileID: 491352931745701017, guid: 79400b8b6675dd643ac41f5502ba79bc, type: 3}
 --- !u!1 &1443589478
 GameObject:
   m_ObjectHideFlags: 0

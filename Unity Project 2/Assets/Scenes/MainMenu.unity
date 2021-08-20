@@ -3095,9 +3095,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4cd2eb19ba8b747880eafec61565b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Default: {fileID: 2100000, guid: 36c4e4dcbb2de04478be7fb67fcb29a5, type: 2}
   playerBody: {fileID: 548855936}
   menuSkin: {fileID: 1577604155}
   title: {fileID: 2047845817}
+  playerPrefab: {fileID: 491352931745701017, guid: 79400b8b6675dd643ac41f5502ba79bc, type: 3}
 --- !u!1 &1577604155
 GameObject:
   m_ObjectHideFlags: 0
@@ -3707,7 +3709,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -260, y: 20}
+  m_AnchoredPosition: {x: -200, y: 20}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2007668318
@@ -3743,7 +3745,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Development Release v0.3.0dev1
+  m_Text: Alpha Release v0.3.0a1
 --- !u!222 &2007668319
 CanvasRenderer:
   m_ObjectHideFlags: 0
