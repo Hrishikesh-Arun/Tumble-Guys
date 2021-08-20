@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Transform followMe,player;
     [SerializeField]
-    private GameObject qe,nextLevel,eb;
+    private GameObject qe,nextLevel,eb,jumper,st;
     [SerializeField]
     private Text TimeLeft;
     private Rigidbody rbody;
@@ -18,10 +18,26 @@ public class PlayerMovement : MonoBehaviour
     public static bool AnimateMovement = false;
     public static bool NextLevelHasBegun = false;
     public float Timer = 120;
+    public Joystick joystick;
 
     // Start is called before the first frame update
     void Start()
     {
+#if UNITY_EDITOR && UNITY_STANDALONE_WIN
+        if (jumper != null)
+        {
+            joystick.gameObject.SetActive(false);
+            jumper.SetActive(false);
+            st.SetActive(false);
+        }
+#elif UNITY_ANDROID
+        if (jumper != null)
+        {
+            joystick.gameObject.SetActive(true);
+            jumper.SetActive(true);
+            st.SetActive(true);
+        }
+#endif
         rbody = player.GetComponent<Rigidbody>();
         if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2" || SceneManager.GetActiveScene().name == "Level3")
         {
@@ -90,14 +106,20 @@ public class PlayerMovement : MonoBehaviour
     }
     void PlayerMovements()
     {
-        float x = Input.GetAxis("Horizontal")/10;
-        float z = Input.GetAxis("Vertical")/10;
-
+        float x = 0;
+        float z = 0;
+#if UNITY_EDITOR && UNITY_STANDALONE_WIN
+        x = Input.GetAxis("Horizontal") / 10;
+        z = Input.GetAxis("Vertical") / 10;
+#elif UNITY_ANDROID
+        x = joystick.Horizontal / 6;
+        z = joystick.Vertical / 6;
+#endif
         RotatePlayerCam();
 
         if (Input.GetButtonDown("Jump"))
         {
-            rbody.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+            Jump();
         }
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
@@ -106,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            player.transform.rotation = Quaternion.Euler(0,0,0);
+            StandUp();
         }
         transform.Translate(x, 0, z);
     }
@@ -120,6 +142,15 @@ public class PlayerMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(4);
         GameHandler.SwitchScene("Level3Lose");
+    }
+
+    public void Jump()
+    {
+        rbody.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+    }
+    public void StandUp()
+    {
+        player.transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
     void RotatePlayerCam()
