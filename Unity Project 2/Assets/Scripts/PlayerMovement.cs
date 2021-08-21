@@ -123,8 +123,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
-            z = z * 2f;
-            x = x * 2f;
+            z *= 2f;
+            x *= 2f;
         }
         if (Input.GetKeyDown(KeyCode.R))
         {

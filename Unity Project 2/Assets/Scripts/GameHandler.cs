@@ -64,7 +64,6 @@ public class GameHandler : MonoBehaviour
     public static void SaveData(int starAmount , string playerName , int level)
     {
         string loadString = SaveSystem.Load();
-		print(loadString);
         if (loadString != null)
         {
             SaveObject saveObject = JsonUtility.FromJson<SaveObject>(loadString);

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public static class SaveSystem
 {
-    private static readonly string SAVE_FOLDER = Application.dataPath + "/GameData/";
+    private static readonly string SAVE_FOLDER = Application.persistentDataPath + "/GameData/";
 
     public static void Init()
     {
@@ -23,6 +23,21 @@ public static class SaveSystem
         if (File.Exists(SAVE_FOLDER + "/gamePlay.kty"))
         {
             return File.ReadAllText(SAVE_FOLDER + "/gamePlay.kty");
+        }
+        else
+        {
+            return null;
+        }
+    }
+    public static void Save2(string data)
+    {
+        File.WriteAllText(SAVE_FOLDER + "/PlayerSkin.kty", data);
+    }
+    public static string Load2()
+    {
+        if (File.Exists(SAVE_FOLDER + "/PlayerSkin.kty"))
+        {
+            return File.ReadAllText(SAVE_FOLDER + "/PlayerSkin.kty");
         }
         else
         {
