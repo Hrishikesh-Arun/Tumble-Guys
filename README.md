@@ -19,7 +19,7 @@ My latest game.Latest Stable Update v0.2.1
 + Bug fixes
 
 ### Alpha Update - 0.3.0a1 (Alpha)
-+ + "Beta On Steroids Update - Part 2 (Alpha)"
++ "Beta On Steroids Update - Part 2 (Alpha)"
 + Change Skin feature added
 + Bug fixes
 
