@@ -1,6 +1,6 @@
 ![pr4](https://user-images.githubusercontent.com/79392401/130195231-58145542-2bf5-476a-8137-060c98d2ab53.png)
 # Tumble Guys
-My latest game.Latest Stable Update v0.2.1
+My latest game. Latest Stable Update v0.2.1
 
 ## Latest Release Candidate Update - 0.3.0rc2 (Release Candidate)
 + "Beta On Steroids Update - Part 2 (Release Candidate 2)"
@@ -32,6 +32,6 @@ My latest game.Latest Stable Update v0.2.1
 + "Beta On Steroids Bugfix Update"
 + Bug fixes
 
-## Latest Update - 0.2 (Beta)
+## Latest Stable Feature Update - 0.2 (Beta)
 + "Beta On Steroids Update"
 + Bug fixes
