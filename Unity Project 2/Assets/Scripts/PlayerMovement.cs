@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Transform followMe,player;
     [SerializeField]
-    private GameObject qe,nextLevel,eb,jumper,st;
+    private GameObject qe, nextLevel, eb, jumper, st, inst,instMain,instParent;
     [SerializeField]
     private Text TimeLeft;
     private Rigidbody rbody;
@@ -23,12 +23,20 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-#if UNITY_EDITOR && UNITY_STANDALONE_WIN
+#if UNITY_EDITOR && UNITY_STANDALONE_WIN || UNITY_WEBGL
         if (jumper != null)
         {
             joystick.gameObject.SetActive(false);
             jumper.SetActive(false);
             st.SetActive(false);
+        }
+        if (SceneManager.GetActiveScene().name == "Level1" && inst != null)
+        {
+            inst.SetActive(true);
+        }
+        if (instParent != null)
+        {
+            instParent.SetActive(false);
         }
 #elif UNITY_ANDROID
         if (jumper != null)
@@ -36,6 +44,14 @@ public class PlayerMovement : MonoBehaviour
             joystick.gameObject.SetActive(true);
             jumper.SetActive(true);
             st.SetActive(true);
+        }
+        if (inst != null)
+        {
+            inst.SetActive(false);
+        }
+        if (instParent != null)
+        {
+            instParent.SetActive(true);
         }
 #endif
         rbody = player.GetComponent<Rigidbody>();
@@ -108,12 +124,19 @@ public class PlayerMovement : MonoBehaviour
     {
         float x = 0;
         float z = 0;
-#if UNITY_EDITOR && UNITY_STANDALONE_WIN
+#if UNITY_EDITOR && UNITY_STANDALONE_WIN || UNITY_WEBGL
         x = Input.GetAxis("Horizontal") / 10;
         z = Input.GetAxis("Vertical") / 10;
 #elif UNITY_ANDROID
         x = joystick.Horizontal / 6;
         z = joystick.Vertical / 6;
+        if (x != 0 || z != 0)
+        {
+            if (instMain != null)
+            {
+                instMain.SetActive(false);
+            }
+        }
 #endif
         RotatePlayerCam();
 
@@ -151,6 +174,18 @@ public class PlayerMovement : MonoBehaviour
     public void StandUp()
     {
         player.transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
+    public void RotateCameraAndroid(bool isRight)
+    {
+        if (!isRight)
+        {
+            followMe.Rotate(0, -18f, 0);
+        }
+        else
+        {
+            followMe.Rotate(0, 18f, 0);
+        }
     }
 
     void RotatePlayerCam()
