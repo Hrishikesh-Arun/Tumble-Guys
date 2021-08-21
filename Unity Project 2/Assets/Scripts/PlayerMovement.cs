@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-#if UNITY_EDITOR && UNITY_STANDALONE_WIN || UNITY_WEBGL
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN || UNITY_WIN || UNITY_WEBGL
         if (jumper != null)
         {
             joystick.gameObject.SetActive(false);
@@ -124,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float x = 0;
         float z = 0;
-#if UNITY_EDITOR && UNITY_STANDALONE_WIN || UNITY_WEBGL
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN || UNITY_WIN || UNITY_WEBGL
         x = Input.GetAxis("Horizontal") / 10;
         z = Input.GetAxis("Vertical") / 10;
 #elif UNITY_ANDROID
