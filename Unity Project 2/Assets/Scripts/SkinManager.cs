@@ -8,23 +8,25 @@ public class SkinManager : MonoBehaviour
 {
     public Material Default;
     public static Material storedMaterial;
-    public GameObject playerBody, menuSkin, title, playerPrefab;
+    public GameObject playerBody, menuSkin, title;
     public List<Material> materialData;
+    private string data;
 
     // Start is called before the first frame update
     void Start()
     {
         if (GameHandler.b == "")
         {
-            if (playerPrefab != null)
-            {
-                playerPrefab.GetComponent<MeshRenderer>().material = Default;
-                PrefabUtility.SaveAsPrefabAsset(playerPrefab, "Assets/Prefabs/Player.prefab");
-            }
+            data = Default.name;
         }
+        else
+        {
+            data = SaveSystem.Load2();
+        }
+        storedMaterial = LoadMaterialsList(data);
         if (playerBody != null)
         {
-            playerBody.GetComponent<MeshRenderer>().material = playerPrefab.GetComponent<MeshRenderer>().sharedMaterial;
+            playerBody.GetComponent<MeshRenderer>().material = storedMaterial;
         }
     }
 
@@ -41,11 +43,7 @@ public class SkinManager : MonoBehaviour
         {
             playerBody.GetComponent<MeshRenderer>().material = material;
         }
-        if (playerPrefab != null)
-        {
-            playerPrefab.GetComponent<MeshRenderer>().material = material;
-            PrefabUtility.SaveAsPrefabAsset(playerPrefab , "Assets/Prefabs/Player.prefab");
-        }
+        SaveSystem.Save2(material.name);
     }
 
     // Toggle Skin Selection
@@ -61,5 +59,18 @@ public class SkinManager : MonoBehaviour
             menuSkin.SetActive(false);
             title.SetActive(true);
         }
+    }
+
+    // Load List
+    public Material LoadMaterialsList(string inp)
+    {
+        foreach (Material material in materialData)
+        {
+            if (material.name == inp)
+            {
+                return material;
+            }
+        }
+        return null;
     }
 }

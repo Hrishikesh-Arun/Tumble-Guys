@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Transform followMe,player;
     [SerializeField]
-    private GameObject qe, nextLevel, eb, jumper, st, inst,instMain,instParent;
+    private GameObject qe, nextLevel, eb, jumper, st, inst,instMain,instParent,cameraButtons;
     [SerializeField]
     private Text TimeLeft;
     private Rigidbody rbody;
@@ -67,10 +67,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
         if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2" || SceneManager.GetActiveScene().name == "Level3")
         {
             if (IfWon != true)
@@ -88,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
                 RotatePlayerCam();
                 nextLevel.SetActive(true);
                 GameHandler.SaveData(10,GameHandler.b,GameHandler.a + 1);
+                cameraButtons.SetActive(false);
             }
             if (NextLevelHasBegun)
             {
@@ -155,6 +152,11 @@ public class PlayerMovement : MonoBehaviour
         {
             StandUp();
         }
+        if (PauseMenu.isPaused)
+        {
+            x = 0;
+            z = 0;
+        }
         transform.Translate(x, 0, z);
     }
     IEnumerator WaitForWin()
@@ -176,9 +178,13 @@ public class PlayerMovement : MonoBehaviour
             rbody.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
             jumpAmount += 1;
         }
-        else
+        else if (SceneManager.GetActiveScene().name == "Level3")
         {
-            print(jumpAmount);
+            if (jumpAmount < 3)
+            {
+                rbody.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+                jumpAmount += 1;
+            }
         }
     }
     public void StandUp()

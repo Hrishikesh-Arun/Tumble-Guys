@@ -60,7 +60,16 @@ public class GameHandler : MonoBehaviour
             Panel4.SetActive(true);
         }
     }
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (SceneManager.GetActiveScene().name != "Level1" && SceneManager.GetActiveScene().name != "Level2" && SceneManager.GetActiveScene().name != "Level3")
+            {
+                Application.Quit();
+            }
+        }
+    }
     public static void SaveData(int starAmount , string playerName , int level)
     {
         string loadString = SaveSystem.Load();

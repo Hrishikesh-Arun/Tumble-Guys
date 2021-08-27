@@ -15,17 +15,20 @@ public class PlatformPhysics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (platformRotPart)
+        if (!PauseMenu.isPaused)
         {
-            transform.Rotate(-0.25f,0,0);
-        }
-        if (platformYRot)
-        {
-            transform.Rotate(0, -1, 0);
-        }
-        if (platformYRot2)
-        {
-            transform.Rotate(0, -4, 0);
+            if (platformRotPart)
+            {
+                transform.Rotate(-0.25f, 0, 0);
+            }
+            if (platformYRot)
+            {
+                transform.Rotate(0, -1, 0);
+            }
+            if (platformYRot2)
+            {
+                transform.Rotate(0, -4, 0);
+            }
         }
     }
 
@@ -35,7 +38,7 @@ public class PlatformPhysics : MonoBehaviour
         {
             if (platformYRot)
             {
-                collision.gameObject.GetComponent<Rigidbody>().AddForce(0, 15, 0, ForceMode.Impulse);
+                collision.gameObject.GetComponent<Rigidbody>().AddForce(0, 12, 0, ForceMode.Impulse);
             }
         }
     }
