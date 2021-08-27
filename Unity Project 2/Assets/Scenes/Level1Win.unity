@@ -307,6 +307,9 @@ MonoBehaviour:
   eb: {fileID: 0}
   jumper: {fileID: 0}
   st: {fileID: 0}
+  inst: {fileID: 0}
+  instMain: {fileID: 0}
+  instParent: {fileID: 0}
   TimeLeft: {fileID: 0}
   Timer: 120
   joystick: {fileID: 0}
@@ -1874,7 +1877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Default: {fileID: 2100000, guid: 36c4e4dcbb2de04478be7fb67fcb29a5, type: 2}
-  playerBody: {fileID: 0}
+  playerBody: {fileID: 499324592}
   menuSkin: {fileID: 0}
   title: {fileID: 0}
   playerPrefab: {fileID: 491352931745701017, guid: 79400b8b6675dd643ac41f5502ba79bc, type: 3}

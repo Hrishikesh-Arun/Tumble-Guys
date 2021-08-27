@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public static bool NextLevelHasBegun = false;
     public float Timer = 120;
     public Joystick joystick;
+    public static float jumpAmount;
 
     // Start is called before the first frame update
     void Start()
@@ -117,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
                 transform.position = Vector3.zero;
                 player.transform.rotation = Quaternion.Euler(0, 0, 0);
                 player.transform.localPosition = new Vector3(0, 5, -2);
+                rbody.velocity = new Vector3(0,0,0);
             }
         }
     }
@@ -169,7 +171,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
-        rbody.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+        if (jumpAmount < 2)
+        {
+            rbody.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+            jumpAmount += 1;
+        }
+        else
+        {
+            print(jumpAmount);
+        }
     }
     public void StandUp()
     {

@@ -26,6 +26,10 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(WaitForDestroy(collision.gameObject));
         }
+        if (gameObject.tag == "Player")
+        {
+            PlayerMovement.jumpAmount = 0;
+        }
     }
 
     IEnumerator WaitForWin()
