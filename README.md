@@ -1,7 +1,19 @@
-![pr4](https://user-images.githubusercontent.com/79392401/130195231-58145542-2bf5-476a-8137-060c98d2ab53.png)
+![pr6](https://user-images.githubusercontent.com/79392401/131157291-2ba969b1-6fa8-4f8e-8783-c1f238e9d72d.png)
 # Tumble Guys
 My latest game.
-Latest Update v0.3.0
+Latest Update v0.3.1
+
+## Latest Bugfix Update - 0.3.1 (Beta)
++ "Beta On Steroids - Part 2 Bugfix Update"
++ Bug fixes
++ Update to Unity 2020.3.17f1
++ Pause Menu
++ Added Water In Level 3
++ Jumping Limit on Game Levels Added
+
+### Bugfix Update - 0.2.1 (Beta)
++ "Beta On Steroids Bugfix Update"
++ Bug fixes
 
 ## Latest Update - 0.3 (Beta)
 + "Beta On Steroids Update - Part 2"
@@ -36,8 +48,4 @@ Latest Update v0.3.0
 ### In Development Update - 0.3.0dev1 (Dev)
 + "Beta On Steroids Update - Part 2 (In Dev)"
 + New Skin Selection Menu
-+ Bug fixes
-
-## Latest Bugfix Update - 0.2.1 (Beta)
-+ "Beta On Steroids Bugfix Update"
 + Bug fixes
