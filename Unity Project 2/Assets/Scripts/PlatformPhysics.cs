@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlatformPhysics : MonoBehaviour
 {
-    public bool platformRotPart,platformYRot,platformYRotSlow, platformYRot2;
+    public bool platformRotPart,platformYRot, platformYRot2;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +22,6 @@ public class PlatformPhysics : MonoBehaviour
                 transform.Rotate(-0.25f, 0, 0);
             }
             if (platformYRot)
-            {
-                transform.Rotate(0, -1, 0);
-            }
-			if (platformYRotSlow)
             {
                 transform.Rotate(0, -1, 0);
             }

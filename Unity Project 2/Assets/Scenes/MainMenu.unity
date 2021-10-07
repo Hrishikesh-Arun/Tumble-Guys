@@ -1115,7 +1115,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Getting Ready for the 'Tumble'
+  m_Text: Beta On Steroids! - Part 2
 --- !u!222 &520028823
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3311,6 +3311,7 @@ MonoBehaviour:
   playerBody: {fileID: 548855936}
   menuSkin: {fileID: 1577604155}
   title: {fileID: 2047845817}
+  playerPrefab: {fileID: 0}
   materialData:
   - {fileID: 2100000, guid: 36c4e4dcbb2de04478be7fb67fcb29a5, type: 2}
   - {fileID: 2100000, guid: 9dd02602cfc448f449b731221357710e, type: 2}
@@ -3318,6 +3319,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: c9a26ab303d387d45b75383551016feb, type: 2}
   - {fileID: 2100000, guid: 54dd886eb1a0cab45a3fce6959552fb2, type: 2}
   - {fileID: 2100000, guid: 365e9c9686b82a9469a750ab1289b87c, type: 2}
+  data: 
 --- !u!1 &1577604155
 GameObject:
   m_ObjectHideFlags: 0
@@ -4177,7 +4179,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Update v0.4.0
+  m_Text: Update v0.3.1
 --- !u!222 &2007668319
 CanvasRenderer:
   m_ObjectHideFlags: 0
