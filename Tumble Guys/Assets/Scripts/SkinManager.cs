@@ -18,6 +18,7 @@ public class SkinManager : MonoBehaviour
         if (GameHandler.b == "")
         {
             data = Default.name;
+            SaveSystem.Save2(data);
         }
         else
         {
