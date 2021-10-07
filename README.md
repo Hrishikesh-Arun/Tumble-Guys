@@ -1,9 +1,13 @@
 ![pr6](https://user-images.githubusercontent.com/79392401/131157291-2ba969b1-6fa8-4f8e-8783-c1f238e9d72d.png)
 # Tumble Guys
 My latest game.
-Latest Update v0.3.1
+Latest Update v0.3.2
 
-## Latest Bugfix Update - 0.3.1 (Beta)
+## Latest Bugfix Update - 0.3.2 (Beta)
++ Upgrade to Unity 2020.3.19f1 LTS
++ Bugfixes
+
+### Latest Bugfix Update - 0.3.1 (Beta)
 + "Beta On Steroids - Part 2 Bugfix Update"
 + Bug fixes
 + Update to Unity 2020.3.17f1
