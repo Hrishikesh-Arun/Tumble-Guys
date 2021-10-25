@@ -310,6 +310,7 @@ MonoBehaviour:
   inst: {fileID: 0}
   instMain: {fileID: 0}
   instParent: {fileID: 0}
+  cameraButtons: {fileID: 0}
   TimeLeft: {fileID: 0}
   Timer: 120
   joystick: {fileID: 0}
@@ -1880,7 +1881,6 @@ MonoBehaviour:
   playerBody: {fileID: 499324592}
   menuSkin: {fileID: 0}
   title: {fileID: 0}
-  playerPrefab: {fileID: 491352931745701017, guid: 79400b8b6675dd643ac41f5502ba79bc, type: 3}
   materialData:
   - {fileID: 2100000, guid: 36c4e4dcbb2de04478be7fb67fcb29a5, type: 2}
   - {fileID: 2100000, guid: 9dd02602cfc448f449b731221357710e, type: 2}
@@ -1888,6 +1888,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: c9a26ab303d387d45b75383551016feb, type: 2}
   - {fileID: 2100000, guid: 54dd886eb1a0cab45a3fce6959552fb2, type: 2}
   - {fileID: 2100000, guid: 365e9c9686b82a9469a750ab1289b87c, type: 2}
+  - {fileID: 2100000, guid: 11df18d16d1d9ce469384762fb6070b3, type: 2}
 --- !u!1 &1443589478
 GameObject:
   m_ObjectHideFlags: 0

@@ -42,6 +42,10 @@ public class SkinManager : MonoBehaviour
     {
         if (playerBody != null)
         {
+            if (material.name == "pumpkin")
+            {
+                GameHandler.SaveData(-1000, GameHandler.b, GameHandler.a);
+            }
             playerBody.GetComponent<MeshRenderer>().material = material;
         }
         SaveSystem.Save2(material.name);
