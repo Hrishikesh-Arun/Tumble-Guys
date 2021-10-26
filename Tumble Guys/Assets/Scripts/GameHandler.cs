@@ -23,7 +23,7 @@ public class GameHandler : MonoBehaviour
 			SaveObject saveObject = JsonUtility.FromJson<SaveObject>(SaveSystem.Load());
 			a = saveObject.level;
         }
-        if (SceneManager.GetActiveScene().name == "Level2" || SceneManager.GetActiveScene().name == "Level3" || SceneManager.GetActiveScene().name == "Level1")
+        if (SceneManager.GetActiveScene().name == "Level2" || SceneManager.GetActiveScene().name == "Level3" || SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level4")
         {
             PlayerMovement.IfWon = false;
             PlayerMovement.AnimateMovement = false;
@@ -51,7 +51,7 @@ public class GameHandler : MonoBehaviour
     }
     public static void SwitchSceneFromData()
     {
-        if (a < 3)
+        if (a < 4)
         {
             SceneManager.LoadScene("Level" + (a + 1));
         }

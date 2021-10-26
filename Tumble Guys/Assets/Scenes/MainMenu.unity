@@ -972,9 +972,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Pumpkin
-
-    (Stars:1000)'
+  m_Text: Pumpkin
 --- !u!222 &372306823
 CanvasRenderer:
   m_ObjectHideFlags: 0

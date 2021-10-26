@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         }
 #endif
         rbody = player.GetComponent<Rigidbody>();
-        if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2" || SceneManager.GetActiveScene().name == "Level3")
+        if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2" || SceneManager.GetActiveScene().name == "Level3" || SceneManager.GetActiveScene().name == "Level4")
         {
             qe.SetActive(false);
             eb.SetActive(false);
@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2" || SceneManager.GetActiveScene().name == "Level3")
+        if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2" || SceneManager.GetActiveScene().name == "Level3" || SceneManager.GetActiveScene().name == "Level4")
         {
             if (IfWon != true)
             {
@@ -148,6 +148,10 @@ public class PlayerMovement : MonoBehaviour
             z *= 2f;
             x *= 2f;
         }
+        if (Input.GetKey(KeyCode.Tab))
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, 160);
+        }
         if (Input.GetKeyDown(KeyCode.R))
         {
             StandUp();
@@ -173,16 +177,27 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
-        if (jumpAmount < 2)
+        if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2")
         {
-            rbody.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
-            jumpAmount += 1;
+            if (jumpAmount < 2)
+            {
+                rbody.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+                jumpAmount += 1;
+            }
         }
         else if (SceneManager.GetActiveScene().name == "Level3")
         {
             if (jumpAmount < 3)
             {
                 rbody.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+                jumpAmount += 1;
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "Level4")
+        {
+            if (jumpAmount < 2)
+            {
+                rbody.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
                 jumpAmount += 1;
             }
         }
