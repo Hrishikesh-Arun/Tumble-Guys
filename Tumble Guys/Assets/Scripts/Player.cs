@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static bool hasCrystal = false;
 
     // Update is called once per frame
     void Update()
@@ -29,6 +24,12 @@ public class Player : MonoBehaviour
         if (gameObject.tag == "Player")
         {
             PlayerMovement.jumpAmount = 0;
+        }
+
+        if (collision.gameObject.name == "Crystal")
+        {
+            collision.gameObject.SetActive(false);
+            hasCrystal = true;
         }
     }
 

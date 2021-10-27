@@ -197,7 +197,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (jumpAmount < 2)
             {
-                rbody.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
+                rbody.AddForce(new Vector3(0, 7.5f, 0), ForceMode.Impulse);
                 jumpAmount += 1;
             }
         }
