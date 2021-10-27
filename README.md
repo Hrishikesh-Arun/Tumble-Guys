@@ -3,8 +3,10 @@
 My latest game.
 Latest Update v0.3.2
 
-## Introducing Tumble Guys Launcher
+## Introducing Tumble Guys Launcher! - Tumble Guys Launcher Beta 1 Out Now!
 ![](https://media.discordapp.net/attachments/902110099655512086/902487512344326164/unknown.png)
++ The Launcher will include the Latest Preview Update (v0.4.0.alpha.2) and the Latest Update (v0.3.2).
++ Download the launcher here: https://github.com/hrishikesh-arun/Tumble-Guys/releases/tag/v1.0-beta.1
 
 ## Latest Bugfix Update - 0.3.2 (Beta)
 + Upgrade to Unity 2020.3.19f1 LTS
