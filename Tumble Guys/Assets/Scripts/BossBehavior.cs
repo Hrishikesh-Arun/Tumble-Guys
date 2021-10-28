@@ -29,7 +29,7 @@ public class BossBehavior : MonoBehaviour
             }
             else
             {
-                collision.gameObject.GetComponent<Rigidbody>().AddForce(0, 10, -4, ForceMode.Impulse);
+                collision.gameObject.GetComponent<Rigidbody>().AddForce(0, 5, -4, ForceMode.Impulse);
             }
         }
     }

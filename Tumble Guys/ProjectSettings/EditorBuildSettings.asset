@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Halloween Update/Level4.unity
     guid: e51d736d06e93ad4da9c3d1ad6ce6ff3
+  - enabled: 1
+    path: Assets/Scenes/Halloween Update/Level4Win.unity
+    guid: 8bb81f70696752449a0fee588ad598bb
   m_configObjects: {}

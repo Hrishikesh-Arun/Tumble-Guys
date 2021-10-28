@@ -162,6 +162,76 @@ public class PlayerMovement : MonoBehaviour
             z = 0;
         }
         transform.Translate(x, 0, z);
+        if (z*10 < -0.4)
+        {
+            if (player.transform.rotation.y != 180)
+            {
+                player.transform.rotation=Quaternion.Euler(0,180,0);
+                followMe.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+
+            if (x * 10 < -0.4)
+            {
+                if (player.transform.rotation.y != -157.5f)
+                {
+                    player.transform.rotation = Quaternion.Euler(0, -157.5f, 0);
+                    followMe.transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+            }
+            else if (x * 10 > 0.4)
+            {
+                if (player.transform.rotation.y != 157.5f)
+                {
+                    player.transform.rotation = Quaternion.Euler(0, 157.5f, 0);
+                    followMe.transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+            }
+        }
+        else if (z*10 > 0.4)
+        {
+            if (player.transform.rotation.y != 0)
+            {
+                player.transform.rotation = Quaternion.Euler(0, 0, 0);
+                followMe.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+
+            if (x * 10 < -0.4)
+            {
+                if (player.transform.rotation.y != -22.5f)
+                {
+                    player.transform.rotation = Quaternion.Euler(0, -22.5f, 0);
+                    followMe.transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+            }
+            else if (x * 10 > 0.4)
+            {
+                if (player.transform.rotation.y != 22.5f)
+                {
+                    player.transform.rotation = Quaternion.Euler(0, 22.5f, 0);
+                    followMe.transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+            }
+        }
+        else
+        {
+            if (x * 10 < -0.4)
+            {
+                if (player.transform.rotation.y != -22.5f)
+                {
+                    player.transform.rotation = Quaternion.Euler(0, -22.5f, 0);
+                    followMe.transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+            }
+            else if (x * 10 > 0.4)
+            {
+                if (player.transform.rotation.y != 22.5f)
+                {
+                    player.transform.rotation = Quaternion.Euler(0, 22.5f, 0);
+                    followMe.transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+            }
+        }
+        
     }
     IEnumerator WaitForWin()
     {
