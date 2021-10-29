@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rbody;
     public static bool IfWon = false;
     public static bool IfLose = false;
+    public static bool IfWonTemp = false;
     public static bool AnimateMovement = false;
     public static bool NextLevelHasBegun = false;
     public float Timer = 120;
@@ -94,16 +95,28 @@ public class PlayerMovement : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "Level3")
             {
                 Timer -= Time.deltaTime;
-                TimeLeft.text = "Time Left:\n" + (int)(Timer/60) + ":" + (int)(Timer%60);
+                int tock = (int)(Timer % 60);
+                string tocktick = "" + tock;
+                if (tock < 10) {
+                    tocktick = "0"+tock;
+                }
+                TimeLeft.text = "Time Left:\n" + (int)(Timer/60) + ":" + tocktick;
                 if (Timer <= 0 && player.transform.position.y > -50)
                 {
                     StartCoroutine(WaitForWin());
                     TimeLeft.text = "";
                 }
+                if (IfWon == true || IfWonTemp == true)
+                {
+                    TimeLeft.text = "";
+                }
                 else if (player.transform.position.y < -53 && IfWon!= true)
                 {
-                    eb.SetActive(true);
-                    StartCoroutine(WaitForLose());
+                    if (IfWonTemp != true)
+                    {
+                        eb.SetActive(true);
+                        StartCoroutine(WaitForLose());
+                    }
                 }
             }
             if (IfLose == true)
@@ -150,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Tab))
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, 160);
+            Timer = 25;
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -216,17 +229,17 @@ public class PlayerMovement : MonoBehaviour
         {
             if (x * 10 < -0.4)
             {
-                if (player.transform.rotation.y != -22.5f)
+                if (player.transform.rotation.y != -90)
                 {
-                    player.transform.rotation = Quaternion.Euler(0, -22.5f, 0);
+                    player.transform.rotation = Quaternion.Euler(0, -90, 0);
                     followMe.transform.rotation = Quaternion.Euler(0, 0, 0);
                 }
             }
             else if (x * 10 > 0.4)
             {
-                if (player.transform.rotation.y != 22.5f)
+                if (player.transform.rotation.y != 90)
                 {
-                    player.transform.rotation = Quaternion.Euler(0, 22.5f, 0);
+                    player.transform.rotation = Quaternion.Euler(0, 90, 0);
                     followMe.transform.rotation = Quaternion.Euler(0, 0, 0);
                 }
             }
@@ -235,6 +248,7 @@ public class PlayerMovement : MonoBehaviour
     }
     IEnumerator WaitForWin()
     {
+        IfWonTemp = true;
         AnimateMovement = true;
         yield return new WaitForSeconds(4);
         IfWon = true;

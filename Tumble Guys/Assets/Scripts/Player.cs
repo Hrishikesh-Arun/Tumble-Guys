@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -25,6 +26,20 @@ public class Player : MonoBehaviour
         {
             PlayerMovement.jumpAmount = 0;
         }
+        if (collision.gameObject.CompareTag("PTBD2"))
+        {
+            StartCoroutine(WaitForDestroy2(collision.gameObject));
+        }
+        if (collision.gameObject.tag == "Portal")
+        {
+            GameHandler.SaveData(1000, GameHandler.b, 3);
+            SceneManager.LoadScene("Level4");
+        }
+        if (collision.gameObject.tag == "Potal2")
+        {
+            GameHandler.SaveData(-100, GameHandler.b, 0);
+            SceneManager.LoadScene("Level1");
+        }
 
         if (collision.gameObject.name == "Crystal")
         {
@@ -44,5 +59,12 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         Destroy(platform);
+    }
+    IEnumerator WaitForDestroy2(GameObject platform)
+    {
+        yield return new WaitForSeconds(0.25f);
+        platform.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        platform.SetActive(true);
     }
 }
