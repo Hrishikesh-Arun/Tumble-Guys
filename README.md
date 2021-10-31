@@ -1,10 +1,10 @@
 ![pr6](https://user-images.githubusercontent.com/79392401/131157291-2ba969b1-6fa8-4f8e-8783-c1f238e9d72d.png)
 # Tumble Guys
 My latest game.
-Latest Update v0.3.2
+Latest Update v0.4.0
 
 
-## Introducing Tumble Guys Launcher! - Tumble Guys Launcher Beta 2 Out Now!
+## Tumble Guys Launcher Beta 2 Out Now!
 ![](https://media.discordapp.net/attachments/902110099655512086/902487512344326164/unknown.png)
 + The Launcher includes the Preview Update (v0.4.0.alpha.2),the Beta Update(v0.4.0.beta.1) and the Latest Update (v0.3.2).
 + Download the launcher here: https://github.com/hrishikesh-arun/Tumble-Guys/releases/tag/v1.0-beta.2
