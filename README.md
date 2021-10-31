@@ -1,4 +1,4 @@
-![pr6](https://user-images.githubusercontent.com/79392401/131157291-2ba969b1-6fa8-4f8e-8783-c1f238e9d72d.png)
+![preview1](https://user-images.githubusercontent.com/79392401/139593246-eeca9ff7-347c-492c-90db-60eae82ccd21.png)
 
 # Tumble Guys
 My latest game.
