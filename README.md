@@ -1,61 +1,20 @@
-![pr6](https://user-images.githubusercontent.com/79392401/131157291-2ba969b1-6fa8-4f8e-8783-c1f238e9d72d.png)
+![preview1](https://user-images.githubusercontent.com/79392401/139593246-eeca9ff7-347c-492c-90db-60eae82ccd21.png)
+
 # Tumble Guys
 My latest game.
-Latest Update v0.3.2
+Latest Update v0.4.0
 
+## Latest Feature Update - 0.4
+![Screenshot](https://user-images.githubusercontent.com/79392401/139591933-9e960507-5739-4fad-a636-0f3e249ea6c0.png)
++ **"Spooky Halloween Update"**
++  Bug fixes
++  Update to Unity 2020.3.21f1
++  Added Level 4 And Halloween Boss
+![Screenshot2](https://user-images.githubusercontent.com/79392401/139592155-f850f1ed-4615-406c-b356-779ed57686e2.png)
++  Added Skins Pumpkin Orange and Orange Glow
++  Level 3 Objective Bar Added
 
-## Introducing Tumble Guys Launcher! - Tumble Guys Launcher Beta 2 Out Now!
+## Tumble Guys Launcher Beta 2 Out Now!
 ![](https://media.discordapp.net/attachments/902110099655512086/902487512344326164/unknown.png)
 + The Launcher includes the Preview Update (v0.4.0.alpha.2),the Beta Update(v0.4.0.beta.1) and the Latest Update (v0.3.2).
 + Download the launcher here: https://github.com/hrishikesh-arun/Tumble-Guys/releases/tag/v1.0-beta.2
-
-## Latest Bugfix Update - 0.3.2 (Beta)
-+ Upgrade to Unity 2020.3.19f1 LTS
-+ Bugfixes
-
-### Latest Bugfix Update - 0.3.1 (Beta)
-+ "Beta On Steroids - Part 2 Bugfix Update"
-+ Bug fixes
-+ Update to Unity 2020.3.17f1
-+ Pause Menu
-+ Added Water In Level 3
-+ Jumping Limit on Game Levels Added
-
-### Bugfix Update - 0.2.1 (Beta)
-+ "Beta On Steroids Bugfix Update"
-+ Bug fixes
-
-## Latest Update - 0.3 (Beta)
-+ "Beta On Steroids Update - Part 2"
-+  Bug fixes
-+  Added Camera Movement in Android
-
-### Feature Update - 0.2 (Beta)
-+ "Beta On Steroids Update"
-+ Bug fixes
-
-## Latest Release Candidate Update - 0.3.0rc2 (Release Candidate)
-+ "Beta On Steroids Update - Part 2 (Release Candidate 2)"
-+ Level 3 Autumn Mode as Default Level 3
-+ New Skin - "Orange"
-+ Bug fixes
-
-### Release Candidate Update - 0.3.0rc1 (Release Candidate)
-+ "Beta On Steroids Update - Part 2 (Release Candidate)"
-+ Bug fixes
-+ First Playable Version on Android
-
-## Alpha Update - 0.3.0a2 (Alpha)
-+ "Beta On Steroids Update - Part 2 (Alpha 2)"
-+ Add Android Update
-+ Bug fixes
-
-### Alpha Update - 0.3.0a1 (Alpha)
-+ "Beta On Steroids Update - Part 2 (Alpha)"
-+ Change Skin feature added
-+ Bug fixes
-
-### In Development Update - 0.3.0dev1 (Dev)
-+ "Beta On Steroids Update - Part 2 (In Dev)"
-+ New Skin Selection Menu
-+ Bug fixes
