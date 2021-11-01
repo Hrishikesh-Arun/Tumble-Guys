@@ -31,17 +31,20 @@ EditorBuildSettings:
     guid: d361cca3dd79b2d4181c514d7453a461
   - enabled: 0
     path: 
-    guid: a5108cbfef0ff234c954ed0640942e34
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
-    guid: 3eddb3183545a8544b34b3f4f315998d
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
-    guid: 44194cc96ec197844bdd04b93c7a453c
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Halloween Update/Level4.unity
     guid: e51d736d06e93ad4da9c3d1ad6ce6ff3
   - enabled: 1
     path: Assets/Scenes/Halloween Update/Level4Win.unity
     guid: 8bb81f70696752449a0fee588ad598bb
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: f1967b0a17c969249a47e5fc08b09e23
   m_configObjects: {}
