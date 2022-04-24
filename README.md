@@ -2,7 +2,17 @@
 
 # Tumble Guys
 My latest game.
-Latest Update v0.4.0
++ Latest Update v0.4.0
++ Latest Dev Update v1.0.0pre-alpha1
+
+## Latest Development Update - 1.0.0 Pre Alpha 1
+![image](https://user-images.githubusercontent.com/79392401/164983467-572f8c0b-93db-42b7-b3d9-7f087c12acf1.png)
++ Updated to Unity 2021 LTS (Unity 2021.3.0f1)
++ New Skins (Incomplete)
++ Bugfixes
++ TextMeshPro Added
++ ### New Settings Menu!
+  ![image](https://user-images.githubusercontent.com/79392401/164983582-84bcfb29-fbfb-4954-94ff-40047d3accf3.png)
 
 ## Latest Feature Update - 0.4
 ![Screenshot](https://user-images.githubusercontent.com/79392401/139591933-9e960507-5739-4fad-a636-0f3e249ea6c0.png)
@@ -13,8 +23,3 @@ Latest Update v0.4.0
 ![Screenshot2](https://user-images.githubusercontent.com/79392401/139592155-f850f1ed-4615-406c-b356-779ed57686e2.png)
 +  Added Skins Pumpkin Orange and Orange Glow
 +  Level 3 Objective Bar Added
-
-## Tumble Guys Launcher Beta 2 Out Now!
-![](https://media.discordapp.net/attachments/902110099655512086/902487512344326164/unknown.png)
-+ The Launcher includes the Preview Update (v0.4.0.alpha.2),the Beta Update(v0.4.0.beta.1) and the Latest Update (v0.3.2).
-+ Download the launcher here: https://github.com/hrishikesh-arun/Tumble-Guys/releases/tag/v1.0-beta.2
