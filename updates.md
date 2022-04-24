@@ -1,5 +1,18 @@
 # Tumble Guys Update History
 
+## Latest Development Update - 1.0.0 Pre Alpha 1
+![image](https://user-images.githubusercontent.com/79392401/164983467-572f8c0b-93db-42b7-b3d9-7f087c12acf1.png)
++ Updated to Unity 2021 LTS (Unity 2021.3.0f1)
++ New Skins (Incomplete)
++ Star Level Skin Lock v2
++ New Background
++ Bugfixes
++ Simplified Programs Part 1
++ TextMeshPro Added
++ ### New Settings Menu!
+  ![image](https://user-images.githubusercontent.com/79392401/164983582-84bcfb29-fbfb-4954-94ff-40047d3accf3.png)
+  + Game Data Delete Option Added
+
 ## Latest Feature Update - 0.4
 ![Screenshot](https://user-images.githubusercontent.com/79392401/139591933-9e960507-5739-4fad-a636-0f3e249ea6c0.png)
 + **"Spooky Halloween Update"**
