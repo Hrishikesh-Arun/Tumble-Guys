@@ -1,1 +1,2 @@
-v0.3.2
+Dev v1.0.0pre-alpha1
+Pro v0.4.0
