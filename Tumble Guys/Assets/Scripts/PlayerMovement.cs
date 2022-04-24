@@ -256,7 +256,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator WaitForLose()
     {
         yield return new WaitForSeconds(4);
-        GameHandler.SwitchScene("Level3Lose");
+        SceneManager.LoadScene("Level" + (GameHandler.a + 1) + "Lose");
     }
 
     public void Jump()

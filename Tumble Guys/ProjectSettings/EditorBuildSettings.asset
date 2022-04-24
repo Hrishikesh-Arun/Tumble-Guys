@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 446e2606f1f883646ac1c592cee571e9
   - enabled: 1
+    path: Assets/Scenes/Summer Update/Settings.unity
+    guid: 45822c931eccfd7418ce4d325d7c5ebf
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1

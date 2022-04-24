@@ -13,6 +13,7 @@ public class GameHandler : MonoBehaviour
     private static GameObject Panel4;
     public static int a;
     public static string b;
+    public static int c;
 
     // Start is called before the first frame update
     void Awake()
@@ -45,10 +46,6 @@ public class GameHandler : MonoBehaviour
         }
     }
 
-    public static void SwitchScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }
     public static void SwitchSceneFromData()
     {
         if (a < 4)
@@ -96,6 +93,7 @@ public class GameHandler : MonoBehaviour
             text.text = "Stars: " + saveObject.stars;
             playerName.text = saveObject.name;
             b = saveObject.name;
+            c = saveObject.stars;
             return saveObject.level;
         }
         else

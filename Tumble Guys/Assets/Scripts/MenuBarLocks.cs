@@ -4,27 +4,54 @@ using UnityEngine;
 
 public class MenuBarLocks : MonoBehaviour
 {
+    public List<GameObject> skinLock;
+    public List<int> skinUnlockLevel;
+    public List<int> skinUnlockScore;
     public GameObject pumpkin,glow;
 
     // Update is called once per frame
     void Update()
     {
-        if (GameHandler.a >= 1)
+        if (gameObject.activeInHierarchy == true)
         {
-            pumpkin.SetActive(true);
-        }
-        else
-        {
-            pumpkin.SetActive(false);
-        }
-
-        if (GameHandler.a >= 2)
-        {
-            glow.SetActive(true);
-        }
-        else
-        {
-            glow.SetActive(false);
+            int klock = 0;
+            int kunlocklevel = 0;
+            int kunlockscore = 0;
+            foreach (GameObject skin in skinLock)
+            {
+                foreach (int level in skinUnlockLevel)
+                {
+                    if (klock == kunlocklevel)
+                    {
+                        foreach (int score in skinUnlockScore)
+                        {
+                            if (kunlocklevel == kunlockscore)
+                            {
+                                if (GameHandler.a >= level)
+                                {
+                                    if (GameHandler.c >= score)
+                                    {
+                                        skin.SetActive(true);
+                                    }
+                                    else
+                                    {
+                                        skin.SetActive(false);
+                                    }
+                                }
+                                else
+                                {
+                                    skin.SetActive(false);
+                                }
+                            }
+                            kunlockscore+=1;
+                        }
+                        kunlockscore = 0;
+                    }
+                    kunlocklevel += 1;
+                }
+                klock += 1;
+                kunlocklevel = 0;
+            }
         }
     }
 }

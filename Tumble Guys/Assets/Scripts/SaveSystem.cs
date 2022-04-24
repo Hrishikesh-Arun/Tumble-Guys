@@ -44,4 +44,16 @@ public static class SaveSystem
             return null;
         }
     }
+
+    public static bool DeleteAllData()
+    {
+        try{
+            Directory.Delete(SAVE_FOLDER,true);
+        }
+        catch
+        {
+            return false;
+        }
+        return true;
+    }
 }
